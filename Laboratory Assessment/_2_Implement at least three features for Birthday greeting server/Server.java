@@ -10,7 +10,7 @@ public class Server {
         {
             System.out.println("Starting the Server!");
             ServerSocket s = new ServerSocket(8080);
-            //This creates a new socket at port 8080.
+            
             Socket sock=s.accept();
             DataInputStream din = new DataInputStream(sock.getInputStream());
             DataOutputStream dout = new DataOutputStream(sock.getOutputStream());
