@@ -46,7 +46,6 @@ public class Client
 
 
         } catch (Exception e) {
-            //TODO: handle exception
             System.out.println("There is an error in the system!");
             System.out.println(e.getMessage());
 
