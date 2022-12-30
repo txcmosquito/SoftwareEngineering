@@ -10,19 +10,18 @@ public class Client
 
     public static void main(String[] args) {
         try {
-            //At first we create a socket
+            
             Socket clientsock=new Socket("localhost",8080);
             DataOutputStream out = new DataOutputStream(clientsock.getOutputStream());
             DataInputStream in =new DataInputStream(clientsock.getInputStream());
             String receivemsg="",sendmesg="";
             Scanner sc = new Scanner(System.in);
 
-            out.writeUTF("Happy Birthday Server!");
+            out.writeUTF("Greetings....");
             out.flush();
             while(true)
             {
-                //For this case, we will be sending a message from the client to the server first.
-                //We don’t want to be stuck with a deadlock now.
+               
                 receivemsg=in.readUTF();
                 System.out.println("Server Says: "+receivemsg);
                 System.out.println("Please enter your message");
